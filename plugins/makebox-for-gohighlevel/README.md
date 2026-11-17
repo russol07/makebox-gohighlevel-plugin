@@ -34,3 +34,7 @@ MakeBox is independent and is not endorsed by HighLevel. Compatibility and featu
 ## Claude Code marketplace
 
 Add the MakeBox marketplace with `claude plugin marketplace add russol07/makebox-gohighlevel-plugin`, then install with `claude plugin install makebox-for-gohighlevel@makebox-crm-plugins`. Restart Claude Code and authenticate the MCP connection. A public directory submission is separate from this repository-based installation.
+
+## Codex marketplace
+
+Add `russol07/makebox-gohighlevel-plugin` as a plugin marketplace in Codex, then install `makebox-for-gohighlevel@makebox-crm-plugins`. Authenticate to the shared MCP endpoint when prompted. This repository-based install is separate from public directory review.
