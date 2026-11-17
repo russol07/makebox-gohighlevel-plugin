@@ -1,0 +1,14 @@
+{
+  "name": "makebox-crm-plugins",
+  "owner": {
+    "name": "MakeBox AI"
+  },
+  "plugins": [
+    {
+      "name": "makebox-for-gohighlevel",
+      "source": "./",
+      "description": "Review authorized GoHighLevel CRM data through MakeBox MCP."
+    }
+  ],
+  "description": "MakeBox AI connectors and skills for authorized CRM work."
+}
