@@ -103,5 +103,6 @@
         "release_notes": "Adds paid workspace and team-seat onboarding guidance, expanded CRM skills, and verified support and policy links."
       }
     }
-  }
+  },
+  "repository": "https://github.com/russol07/makebox-gohighlevel-plugin"
 }

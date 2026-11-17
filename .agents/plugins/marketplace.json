@@ -1,0 +1,12 @@
+{
+  "name": "makebox-crm-plugins",
+  "interface": { "displayName": "MakeBox CRM Plugins" },
+  "plugins": [
+    {
+      "name": "makebox-for-gohighlevel",
+      "source": { "source": "local", "path": "./plugins/makebox-for-gohighlevel" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

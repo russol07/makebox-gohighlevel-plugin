@@ -30,3 +30,7 @@ Privacy: https://mcp.makebox.ai/account/privacy-ghl.html
 Terms: https://mcp.makebox.ai/account/terms-ghl.html
 
 MakeBox is independent and is not endorsed by HighLevel. Compatibility and feature availability depend on the underlying agency and provider settings.
+
+## Claude Code marketplace
+
+Add the MakeBox marketplace with `claude plugin marketplace add russol07/makebox-gohighlevel-plugin`, then install with `claude plugin install makebox-for-gohighlevel@makebox-crm-plugins`. Restart Claude Code and authenticate the MCP connection. A public directory submission is separate from this repository-based installation.

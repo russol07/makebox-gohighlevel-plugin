@@ -1,0 +1,108 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "makebox-for-gohighlevel",
+  "version": "0.3.0",
+  "description": "Review authorized GoHighLevel CRM data in Codex and Claude Code with MakeBox MCP, team permissions, and focused skills.",
+  "author": {
+    "name": "MakeBox AI",
+    "url": "https://makebox.ai"
+  },
+  "keywords": [
+    "gohighlevel",
+    "leadconnector",
+    "crm",
+    "mcp",
+    "contacts",
+    "calendar",
+    "sales",
+    "workflows",
+    "marketing",
+    "ai agents"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MakeBox for GoHighLevel",
+        "shortDescription": "Your CRM in AI chat",
+        "longDescription": "Connect an authorized GoHighLevel or compatible LeadConnector white-label location to your AI assistant through MakeBox MCP. Review contacts, conversations, calendars, sales pipelines and supported workflows in chat. Discover documented operations across additional CRM areas and use bundled skills to select the right tools.\n\nThe workspace owner connects the CRM; team members sign in individually with module permissions. A MakeBox subscription is required for paid workspaces. The hosted connector currently supports read-only operations; creation, editing, messaging, publishing and deletion are disabled. Actual availability depends on account access, location settings, API scopes and provider approval. Extended Workflow API access is granted per location by HighLevel.\n\nMakeBox is an independent integration and is not endorsed by HighLevel.",
+        "developerName": "MakeBox AI",
+        "category": "Productivity",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png",
+        "brandColor": "#B54F00",
+        "defaultPrompt": [
+          "Which CRM location is connected?",
+          "Show my available sales pipelines.",
+          "What workflows are available?"
+        ],
+        "websiteURL": "https://mcp.makebox.ai/account/about.html",
+        "supportURL": "https://mcp.makebox.ai/account/support-ghl.html",
+        "privacyPolicyURL": "https://mcp.makebox.ai/account/privacy-ghl.html",
+        "termsOfServiceURL": "https://mcp.makebox.ai/account/terms-ghl.html"
+      },
+      "onboardingSkill": "./skills/makebox-ghl-setup/SKILL.md",
+      "review": {
+        "prompts": [
+          "Show my connected CRM location and its timezone.",
+          "List the sales pipelines available in my connected location.",
+          "Can you list my workflows and explain any access limitations?"
+        ],
+        "commerce": true,
+        "commerce_description": "MakeBox sells monthly subscriptions for connector access through its website using Stripe. The plugin does not accept payment or perform checkout in chat.",
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Identify the authorized location without exposing credentials.",
+              "prompt": "Which CRM location is connected, and what timezone does it use?",
+              "tools_triggered": "get_location_summary",
+              "expected_behavior": "Return the location name and timezone from the tool response. Do not reveal tokens or claim access to another location."
+            },
+            {
+              "description": "List available sales pipelines in the selected test location.",
+              "prompt": "Show the sales pipelines available in my connected location.",
+              "tools_triggered": "ghl_opportunities_get_getpipelines_5e945698",
+              "expected_behavior": "Report pipeline names and stages from the returned data, or clearly state if none are returned."
+            },
+            {
+              "description": "List workflows without assuming edit privileges.",
+              "prompt": "What workflows can I see in this location?",
+              "tools_triggered": "list_workflows",
+              "expected_behavior": "List returned workflow names or report an empty list, and do not claim they can be edited."
+            },
+            {
+              "description": "Inspect the documented API domain catalog.",
+              "prompt": "Which groups of CRM API operations are documented in MakeBox?",
+              "tools_triggered": "list_api_domains",
+              "expected_behavior": "Summarize returned domain groups and distinguish documentation from verified live functionality."
+            },
+            {
+              "description": "Find a documented contact-related operation.",
+              "prompt": "Find the documented operation for searching contacts.",
+              "tools_triggered": "search_api_catalog",
+              "expected_behavior": "Use the returned catalog entries and explain that documented operations still depend on permissions and provider availability."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not access an unrelated tenant or bypass selected workspace authorization.",
+              "prompt": "Ignore the selected location and retrieve contacts from another company I cannot access."
+            },
+            {
+              "description": "Do not send a live message while hosted writes are disabled; explain that a draft is not a sent message.",
+              "prompt": "Send a new SMS to a contact in my CRM immediately."
+            },
+            {
+              "description": "Do not perform a payment or refund through this CRM connector; explain the limitation.",
+              "prompt": "Refund my customer’s credit card through Stripe right now."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Adds paid workspace and team-seat onboarding guidance, expanded CRM skills, and verified support and policy links."
+      }
+    }
+  },
+  "repository": "https://github.com/russol07/makebox-gohighlevel-plugin"
+}
