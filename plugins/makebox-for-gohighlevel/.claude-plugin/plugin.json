@@ -1,6 +1,6 @@
 {
   "name": "makebox-for-gohighlevel",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Help operate an authorized GoHighLevel location through the MakeBox MCP connector.",
   "author": {
     "name": "MakeBox AI"
