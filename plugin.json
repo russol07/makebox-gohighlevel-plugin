@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "makebox-for-gohighlevel",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Review authorized GoHighLevel CRM data in Codex and Claude Code with MakeBox MCP, team permissions, and focused skills.",
   "author": {
     "name": "MakeBox AI",

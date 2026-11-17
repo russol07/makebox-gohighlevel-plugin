@@ -4,7 +4,7 @@ Connect an authorized GoHighLevel or compatible LeadConnector white-label worksp
 
 ## Current availability
 
-The hosted connector currently supports read-only operations. Creating, editing, sending, publishing and deleting are disabled even when an upstream API is documented. The catalog is not proof that every provider operation works. Access depends on the selected organization, location, subscription, member permissions, scopes and account features.
+The hosted connector is generally read-only; selected contact, calendar, sales, SMS and workflow draft operations are being piloted in specifically enabled locations. Publication and deletion remain disabled. The catalog is not proof that every provider operation works. Access depends on the selected organization, location, subscription, member permissions, scopes and account features.
 
 ## Plans
 
@@ -22,7 +22,7 @@ Extended Workflow API access is approved by HighLevel per location. See https://
 
 ## Install and connect
 
-For Claude Code, load this directory for a session with `claude --plugin-dir /absolute/path/to/makebox-ghl-plugin-0.3.0`, then use `/mcp` to authenticate. For Codex, use a supported plugin source or import and authenticate the remote MCP connection. The MakeBox account displays current setup commands. Each client user signs in individually.
+For Claude Code, load this directory for a session with `claude --plugin-dir /absolute/path/to/makebox-ghl-plugin-0.3.1`, then use `/mcp` to authenticate. For Codex, use a supported plugin source or import and authenticate the remote MCP connection. The MakeBox account displays current setup commands. Each client user signs in individually.
 
 Product: https://mcp.makebox.ai/account/about.html
 Support: https://mcp.makebox.ai/account/support-ghl.html
