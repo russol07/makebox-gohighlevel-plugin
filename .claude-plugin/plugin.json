@@ -11,5 +11,21 @@
   "privacyPolicyUrl": "https://mcp.makebox.ai/account/privacy-ghl.html",
   "supportUrl": "https://mcp.makebox.ai/account/support-ghl.html",
   "termsOfServiceUrl": "https://mcp.makebox.ai/account/terms-ghl.html",
-  "documentationUrl": "https://mcp.makebox.ai/account/support-ghl.html"
+  "documentationUrl": "https://mcp.makebox.ai/account/support-ghl.html",
+  "icon": "./assets/logo.png",
+  "keywords": [
+    "GoHighLevel",
+    "GHL",
+    "LeadConnector",
+    "CRM",
+    "MCP",
+    "contacts",
+    "SMS",
+    "appointments",
+    "calendar",
+    "sales pipelines",
+    "workflows",
+    "automation",
+    "AI agents"
+  ]
 }
