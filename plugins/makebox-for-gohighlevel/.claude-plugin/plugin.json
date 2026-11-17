@@ -6,5 +6,10 @@
     "name": "MakeBox AI"
   },
   "homepage": "https://mcp.makebox.ai/account/about.html",
-  "repository": "https://github.com/russol07/makebox-gohighlevel-plugin"
+  "repository": "https://github.com/russol07/makebox-gohighlevel-plugin",
+  "displayName": "MakeBox for GoHighLevel",
+  "privacyPolicyUrl": "https://mcp.makebox.ai/account/privacy-ghl.html",
+  "supportUrl": "https://mcp.makebox.ai/account/support-ghl.html",
+  "termsOfServiceUrl": "https://mcp.makebox.ai/account/terms-ghl.html",
+  "documentationUrl": "https://mcp.makebox.ai/account/support-ghl.html"
 }
