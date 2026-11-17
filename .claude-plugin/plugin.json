@@ -1,7 +1,7 @@
 {
   "name": "makebox-for-gohighlevel",
   "version": "0.3.2",
-  "description": "Help operate an authorized GoHighLevel location through the MakeBox MCP connector.",
+  "description": "Connect GoHighLevel CRM to Claude: work with contacts, conversations, SMS, appointments, pipelines and supported workflows through MakeBox MCP.",
   "author": {
     "name": "MakeBox AI"
   },
